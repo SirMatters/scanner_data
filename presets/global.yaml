@@ -10,7 +10,7 @@ presets:
     - dr
     - stock
   - left: typespecs
-    operation: typespecs
+    operation: has
     right:
     - ''
     - common
