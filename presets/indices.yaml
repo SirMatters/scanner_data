@@ -5,9 +5,6 @@ presets:
   - left: sector
     operation: equal
     right: index
-  filterOR: []
-  options: {}
-  price_conversion: {}
   sort:
     sortBy: index_priority
     sortOrder: asc
@@ -17,9 +14,6 @@ presets:
   filter:
   - left: sector
     operation: empty
-  filterOR: []
-  options: {}
-  price_conversion: {}
   sort:
     sortBy: index_priority
     sortOrder: asc
@@ -29,9 +23,6 @@ presets:
   filter:
   - left: sector
     operation: nempty
-  filterOR: []
-  options: {}
-  price_conversion: {}
   sort:
     sortBy: index_priority
     sortOrder: asc
@@ -42,9 +33,6 @@ presets:
   - left: sector
     operation: equal
     right: currency
-  filterOR: []
-  options: {}
-  price_conversion: {}
   sort:
     sortBy: index_priority
     sortOrder: asc
