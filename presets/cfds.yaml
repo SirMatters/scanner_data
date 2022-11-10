@@ -1,0 +1,11 @@
+---
+presets:
+- name: quotes_all
+  filter: []
+  sort:
+    sortBy: name
+    sortOrder: asc
+  options: {}
+  price_conversion: {}
+  markets:
+  - cfd
