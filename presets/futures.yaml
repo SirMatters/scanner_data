@@ -1,0 +1,90 @@
+---
+presets:
+- name: quotes_all
+  filter:
+  - left: typespecs
+    operation: has
+    right: continuous
+  sort:
+    sortBy: name
+    sortOrder: asc
+  markets:
+  - america
+- name: quotes_agricultural
+  filter:
+  - left: typespecs
+    operation: has
+    right: continuous
+  - left: sector
+    operation: equal
+    right: Agricultural
+  sort:
+    sortBy: name
+    sortOrder: asc
+  markets:
+  - america
+- name: quotes_energy
+  filter:
+  - left: typespecs
+    operation: has
+    right: continuous
+  - left: sector
+    operation: equal
+    right: Energy
+  sort:
+    sortBy: name
+    sortOrder: asc
+  markets:
+  - america
+- name: quotes_currencies
+  filter:
+  - left: typespecs
+    operation: has
+    right: continuous
+  - left: sector
+    operation: equal
+    right: Currencies
+  sort:
+    sortBy: name
+    sortOrder: asc
+  markets:
+  - america
+- name: quotes_metals
+  filter:
+  - left: typespecs
+    operation: has
+    right: continuous
+  - left: sector
+    operation: equal
+    right: Metals
+  sort:
+    sortBy: name
+    sortOrder: asc
+  markets:
+  - america
+- name: quotes_world_indices
+  filter:
+  - left: typespecs
+    operation: has
+    right: continuous
+  - left: sector
+    operation: equal
+    right: Indexes
+  sort:
+    sortBy: name
+    sortOrder: asc
+  markets:
+  - america
+- name: quotes_interest_rates
+  filter:
+  - left: typespecs
+    operation: has
+    right: continuous
+  - left: sector
+    operation: equal
+    right: Financials
+  sort:
+    sortBy: name
+    sortOrder: asc
+  markets:
+  - america
