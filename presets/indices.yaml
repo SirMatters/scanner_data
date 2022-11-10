@@ -1,0 +1,52 @@
+---
+presets:
+- name: quotes_major
+  filter:
+  - left: sector
+    operation: equal
+    right: index
+  filterOR: []
+  options: {}
+  price_conversion: {}
+  sort:
+    sortBy: index_priority
+    sortOrder: asc
+  markets:
+  - cfd
+- name: quotes_us
+  filter:
+  - left: sector
+    operation: empty
+  filterOR: []
+  options: {}
+  price_conversion: {}
+  sort:
+    sortBy: index_priority
+    sortOrder: asc
+  markets:
+  - america
+- name: quotes_snp
+  filter:
+  - left: sector
+    operation: nempty
+  filterOR: []
+  options: {}
+  price_conversion: {}
+  sort:
+    sortBy: index_priority
+    sortOrder: asc
+  markets:
+  - america
+- name: quotes_currency
+  filter:
+  - left: sector
+    operation: equal
+    right: currency
+  filterOR: []
+  options: {}
+  price_conversion: {}
+  sort:
+    sortBy: index_priority
+    sortOrder: asc
+  markets:
+  - cfd
