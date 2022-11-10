@@ -14,8 +14,6 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: name
-    operation: nempty
   sort:
     sortBy: name
     sortOrder: asc
@@ -35,8 +33,6 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: market_cap_basic
-    operation: nempty
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -56,8 +52,6 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: market_cap_basic
-    operation: nempty
   sort:
     sortBy: market_cap_basic
     sortOrder: asc
@@ -78,8 +72,6 @@ presets:
     operation: equal
     right: stock
   - left: market_cap_basic
-    operation: nempty
-  - left: number_of_employees
     operation: nempty
   sort:
     sortBy: number_of_employees
@@ -103,8 +95,6 @@ presets:
   - left: dividend_yield_recent
     operation: greater
     right: 0
-  - left: dividend_yield_recent
-    operation: nempty
   sort:
     sortBy: dividend_yield_recent
     sortOrder: desc
@@ -124,10 +114,27 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: net_income
-    operation: nempty
   sort:
     sortBy: net_income
+    sortOrder: desc
+  options:
+    active_symbols_only: true
+- name: highest_cash
+  filter:
+  - left: is_primary
+    operation: equal
+    right: true
+  - left: typespecs
+    operation: has
+    right: common
+  - left: typespecs
+    operation: has
+    right: sharia
+  - left: type
+    operation: equal
+    right: stock
+  sort:
+    sortBy: cash_n_short_term_invest_fq
     sortOrder: desc
   options:
     active_symbols_only: true
@@ -153,8 +160,6 @@ presets:
   - left: change
     operation: greater
     right: 0
-  - left: change
-    operation: nempty
   sort:
     sortBy: change
     sortOrder: desc
@@ -182,14 +187,12 @@ presets:
   - left: change
     operation: less
     right: 0
-  - left: change
-    operation: nempty
   sort:
     sortBy: change
     sortOrder: asc
   options:
     active_symbols_only: true
-- name: volume_leaders
+- name: active
   filter:
   - left: is_primary
     operation: equal
@@ -208,8 +211,6 @@ presets:
     right:
     - 0.01
     - 10000
-  - left: volume
-    operation: nempty
   sort:
     sortBy: volume
     sortOrder: desc
@@ -229,8 +230,6 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: relative_volume_10d_calc
-    operation: nempty
   sort:
     sortBy: relative_volume_10d_calc
     sortOrder: desc
@@ -250,8 +249,6 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: Volatility.D
-    operation: nempty
   sort:
     sortBy: Volatility.D
     sortOrder: desc
@@ -272,8 +269,6 @@ presets:
     operation: equal
     right: stock
   - left: market_cap_basic
-    operation: nempty
-  - left: beta_1_year
     operation: nempty
   sort:
     sortBy: beta_1_year
@@ -296,8 +291,6 @@ presets:
     right: stock
   - left: market_cap_basic
     operation: nempty
-  - left: Perf.Y
-    operation: nempty
   sort:
     sortBy: Perf.Y
     sortOrder: desc
@@ -317,8 +310,6 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: total_revenue
-    operation: nempty
   sort:
     sortBy: total_revenue
     sortOrder: desc
@@ -340,8 +331,6 @@ presets:
     right: stock
   - left: market_cap_basic
     operation: nempty
-  - left: close
-    operation: nempty
   sort:
     sortBy: close
     sortOrder: desc
@@ -361,8 +350,6 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: close
-    operation: nempty
   sort:
     sortBy: close
     sortOrder: asc
@@ -385,11 +372,9 @@ presets:
   - left: RSI
     operation: greater
     right: 70
-  - left: name
-    operation: nempty
   sort:
-    sortBy: name
-    sortOrder: asc
+    sortBy: RSI
+    sortOrder: desc
   options:
     active_symbols_only: true
 - name: oversold
@@ -409,10 +394,8 @@ presets:
   - left: RSI
     operation: less
     right: 30
-  - left: name
-    operation: nempty
   sort:
-    sortBy: name
+    sortBy: RSI
     sortOrder: asc
   options:
     active_symbols_only: true
@@ -433,8 +416,6 @@ presets:
   - left: High.All
     operation: eless
     right: high
-  - left: name
-    operation: nempty
   sort:
     sortBy: name
     sortOrder: asc
@@ -457,8 +438,6 @@ presets:
   - left: Low.All
     operation: egreater
     right: low
-  - left: name
-    operation: nempty
   sort:
     sortBy: name
     sortOrder: asc
@@ -481,8 +460,6 @@ presets:
   - left: price_52_week_high
     operation: eless
     right: high
-  - left: name
-    operation: nempty
   sort:
     sortBy: name
     sortOrder: asc
@@ -505,68 +482,8 @@ presets:
   - left: price_52_week_low
     operation: egreater
     right: low
-  - left: name
-    operation: nempty
   sort:
     sortBy: name
-    sortOrder: asc
-  options:
-    active_symbols_only: true
-- name: pre-market-gainers
-  filter:
-  - left: is_primary
-    operation: equal
-    right: true
-  - left: typespecs
-    operation: has
-    right: common
-  - left: typespecs
-    operation: has
-    right: sharia
-  - left: type
-    operation: equal
-    right: stock
-  - left: close
-    operation: in_range
-    right:
-    - 0.01
-    - 10000
-  - left: premarket_change
-    operation: greater
-    right: 0
-  - left: premarket_change
-    operation: nempty
-  sort:
-    sortBy: premarket_change
-    sortOrder: desc
-  options:
-    active_symbols_only: true
-- name: pre-market-losers
-  filter:
-  - left: is_primary
-    operation: equal
-    right: true
-  - left: typespecs
-    operation: has
-    right: common
-  - left: typespecs
-    operation: has
-    right: sharia
-  - left: type
-    operation: equal
-    right: stock
-  - left: close
-    operation: in_range
-    right:
-    - 0.01
-    - 10000
-  - left: premarket_change
-    operation: less
-    right: 0
-  - left: premarket_change
-    operation: nempty
-  sort:
-    sortBy: premarket_change
     sortOrder: asc
   options:
     active_symbols_only: true
