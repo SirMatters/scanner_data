@@ -56,3 +56,23 @@ presets:
     sortOrder: asc
   markets:
   - cfd
+- name: indices_major
+  filter:
+  - left: sector
+    operation: equal
+    right: index
+  sort:
+    sortBy: index_priority
+    sortOrder: asc
+  markets:
+  - cfd
+- name: indices_currency
+  filter:
+  - left: sector
+    operation: equal
+    right: currency
+  sort:
+    sortBy: index_priority
+    sortOrder: asc
+  markets:
+  - cfd
