@@ -1,6 +1,8 @@
 ---
 presets:
 - name: all_stocks
+  options:
+    active_symbols_only: true
   filter:
   - left: is_primary
     operation: equal
@@ -11,14 +13,14 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: name
-    operation: nempty
   sort:
     sortBy: name
     sortOrder: asc
+  markets:
+  - switzerland
+- name: large_cap
   options:
     active_symbols_only: true
-- name: large_cap
   filter:
   - left: is_primary
     operation: equal
@@ -29,14 +31,14 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: market_cap_basic
-    operation: nempty
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
+  markets:
+  - switzerland
+- name: small_cap
   options:
     active_symbols_only: true
-- name: small_cap
   filter:
   - left: is_primary
     operation: equal
@@ -47,14 +49,14 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: market_cap_basic
-    operation: nempty
   sort:
     sortBy: market_cap_basic
     sortOrder: asc
+  markets:
+  - switzerland
+- name: largest_employers
   options:
     active_symbols_only: true
-- name: largest_employers
   filter:
   - left: is_primary
     operation: equal
@@ -66,15 +68,15 @@ presets:
     operation: equal
     right: stock
   - left: market_cap_basic
-    operation: nempty
-  - left: number_of_employees
     operation: nempty
   sort:
     sortBy: number_of_employees
     sortOrder: desc
+  markets:
+  - switzerland
+- name: high_dividend
   options:
     active_symbols_only: true
-- name: high_dividend
   filter:
   - left: is_primary
     operation: equal
@@ -88,14 +90,14 @@ presets:
   - left: dividend_yield_recent
     operation: greater
     right: 0
-  - left: dividend_yield_recent
-    operation: nempty
   sort:
     sortBy: dividend_yield_recent
     sortOrder: desc
+  markets:
+  - switzerland
+- name: highest_net_income
   options:
     active_symbols_only: true
-- name: highest_net_income
   filter:
   - left: is_primary
     operation: equal
@@ -106,14 +108,32 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: net_income
-    operation: nempty
   sort:
     sortBy: net_income
     sortOrder: desc
+  markets:
+  - switzerland
+- name: highest_cash
   options:
     active_symbols_only: true
+  filter:
+  - left: is_primary
+    operation: equal
+    right: true
+  - left: typespecs
+    operation: has
+    right: common
+  - left: type
+    operation: equal
+    right: stock
+  sort:
+    sortBy: cash_n_short_term_invest_fq
+    sortOrder: desc
+  markets:
+  - switzerland
 - name: gainers
+  options:
+    active_symbols_only: true
   filter:
   - left: is_primary
     operation: equal
@@ -132,14 +152,14 @@ presets:
   - left: change
     operation: greater
     right: 0
-  - left: change
-    operation: nempty
   sort:
     sortBy: change
     sortOrder: desc
+  markets:
+  - switzerland
+- name: losers
   options:
     active_symbols_only: true
-- name: losers
   filter:
   - left: is_primary
     operation: equal
@@ -158,14 +178,14 @@ presets:
   - left: change
     operation: less
     right: 0
-  - left: change
-    operation: nempty
   sort:
     sortBy: change
     sortOrder: asc
+  markets:
+  - switzerland
+- name: active
   options:
     active_symbols_only: true
-- name: volume_leaders
   filter:
   - left: is_primary
     operation: equal
@@ -181,14 +201,14 @@ presets:
     right:
     - 0.1
     - 10000
-  - left: volume
-    operation: nempty
   sort:
     sortBy: volume
     sortOrder: desc
+  markets:
+  - switzerland
+- name: unusual_volume
   options:
     active_symbols_only: true
-- name: unusual_volume
   filter:
   - left: is_primary
     operation: equal
@@ -199,14 +219,14 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: relative_volume_10d_calc
-    operation: nempty
   sort:
     sortBy: relative_volume_10d_calc
     sortOrder: desc
+  markets:
+  - switzerland
+- name: most_volatile
   options:
     active_symbols_only: true
-- name: most_volatile
   filter:
   - left: is_primary
     operation: equal
@@ -217,14 +237,14 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: Volatility.D
-    operation: nempty
   sort:
     sortBy: Volatility.D
     sortOrder: desc
+  markets:
+  - switzerland
+- name: high_beta
   options:
     active_symbols_only: true
-- name: high_beta
   filter:
   - left: is_primary
     operation: equal
@@ -236,15 +256,15 @@ presets:
     operation: equal
     right: stock
   - left: market_cap_basic
-    operation: nempty
-  - left: beta_1_year
     operation: nempty
   sort:
     sortBy: beta_1_year
     sortOrder: desc
+  markets:
+  - switzerland
+- name: best_performing
   options:
     active_symbols_only: true
-- name: best_performing
   filter:
   - left: is_primary
     operation: equal
@@ -256,15 +276,15 @@ presets:
     operation: equal
     right: stock
   - left: market_cap_basic
-    operation: nempty
-  - left: Perf.Y
     operation: nempty
   sort:
     sortBy: Perf.Y
     sortOrder: desc
+  markets:
+  - switzerland
+- name: highest_revenue
   options:
     active_symbols_only: true
-- name: highest_revenue
   filter:
   - left: is_primary
     operation: equal
@@ -275,14 +295,14 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: total_revenue
-    operation: nempty
   sort:
     sortBy: total_revenue
     sortOrder: desc
+  markets:
+  - switzerland
+- name: most_expensive
   options:
     active_symbols_only: true
-- name: most_expensive
   filter:
   - left: is_primary
     operation: equal
@@ -295,14 +315,14 @@ presets:
     right: stock
   - left: market_cap_basic
     operation: nempty
-  - left: close
-    operation: nempty
   sort:
     sortBy: close
     sortOrder: desc
+  markets:
+  - switzerland
+- name: penny_stocks
   options:
     active_symbols_only: true
-- name: penny_stocks
   filter:
   - left: is_primary
     operation: equal
@@ -313,14 +333,14 @@ presets:
   - left: type
     operation: equal
     right: stock
-  - left: close
-    operation: nempty
   sort:
     sortBy: close
     sortOrder: asc
+  markets:
+  - switzerland
+- name: overbought
   options:
     active_symbols_only: true
-- name: overbought
   filter:
   - left: is_primary
     operation: equal
@@ -334,14 +354,14 @@ presets:
   - left: RSI
     operation: greater
     right: 70
-  - left: name
-    operation: nempty
   sort:
-    sortBy: name
-    sortOrder: asc
+    sortBy: RSI
+    sortOrder: desc
+  markets:
+  - switzerland
+- name: oversold
   options:
     active_symbols_only: true
-- name: oversold
   filter:
   - left: is_primary
     operation: equal
@@ -355,14 +375,14 @@ presets:
   - left: RSI
     operation: less
     right: 30
-  - left: name
-    operation: nempty
   sort:
-    sortBy: name
+    sortBy: RSI
     sortOrder: asc
+  markets:
+  - switzerland
+- name: all_time_high
   options:
     active_symbols_only: true
-- name: all_time_high
   filter:
   - left: is_primary
     operation: equal
@@ -376,14 +396,14 @@ presets:
   - left: High.All
     operation: eless
     right: high
-  - left: name
-    operation: nempty
   sort:
     sortBy: name
     sortOrder: asc
+  markets:
+  - switzerland
+- name: all_time_low
   options:
     active_symbols_only: true
-- name: all_time_low
   filter:
   - left: is_primary
     operation: equal
@@ -397,14 +417,14 @@ presets:
   - left: Low.All
     operation: egreater
     right: low
-  - left: name
-    operation: nempty
   sort:
     sortBy: name
     sortOrder: asc
+  markets:
+  - switzerland
+- name: above_52wk_high
   options:
     active_symbols_only: true
-- name: above_52wk_high
   filter:
   - left: is_primary
     operation: equal
@@ -418,14 +438,14 @@ presets:
   - left: price_52_week_high
     operation: eless
     right: high
-  - left: name
-    operation: nempty
   sort:
     sortBy: name
     sortOrder: asc
+  markets:
+  - switzerland
+- name: below_52wk_low
   options:
     active_symbols_only: true
-- name: below_52wk_low
   filter:
   - left: is_primary
     operation: equal
@@ -439,62 +459,8 @@ presets:
   - left: price_52_week_low
     operation: egreater
     right: low
-  - left: name
-    operation: nempty
   sort:
     sortBy: name
     sortOrder: asc
-  options:
-    active_symbols_only: true
-- name: pre-market-gainers
-  filter:
-  - left: is_primary
-    operation: equal
-    right: true
-  - left: typespecs
-    operation: has
-    right: common
-  - left: type
-    operation: equal
-    right: stock
-  - left: close
-    operation: in_range
-    right:
-    - 0.1
-    - 10000
-  - left: premarket_change
-    operation: greater
-    right: 0
-  - left: premarket_change
-    operation: nempty
-  sort:
-    sortBy: premarket_change
-    sortOrder: desc
-  options:
-    active_symbols_only: true
-- name: pre-market-losers
-  filter:
-  - left: is_primary
-    operation: equal
-    right: true
-  - left: typespecs
-    operation: has
-    right: common
-  - left: type
-    operation: equal
-    right: stock
-  - left: close
-    operation: in_range
-    right:
-    - 0.1
-    - 10000
-  - left: premarket_change
-    operation: less
-    right: 0
-  - left: premarket_change
-    operation: nempty
-  sort:
-    sortBy: premarket_change
-    sortOrder: asc
-  options:
-    active_symbols_only: true
+  markets:
+  - switzerland
