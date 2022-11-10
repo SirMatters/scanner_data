@@ -4,8 +4,6 @@ presets:
   sort:
     sortBy: name
     sortOrder: asc
-  markets:
-  - cfd
 - name: cfd_agricultural
   filter:
   - left: sector
@@ -14,8 +12,6 @@ presets:
   sort:
     sortBy: name
     sortOrder: asc
-  markets:
-  - cfd
 - name: cfd_energy
   filter:
   - left: sector
@@ -24,8 +20,6 @@ presets:
   sort:
     sortBy: name
     sortOrder: asc
-  markets:
-  - cfd
 - name: cfd_metals
   filter:
   - left: sector
@@ -34,8 +28,6 @@ presets:
   sort:
     sortBy: name
     sortOrder: asc
-  markets:
-  - cfd
 - name: cfd_world_indices
   filter:
   - left: sector
@@ -44,8 +36,6 @@ presets:
   sort:
     sortBy: name
     sortOrder: asc
-  markets:
-  - cfd
 - name: cfd_interest_rates
   filter:
   - left: sector
@@ -54,8 +44,6 @@ presets:
   sort:
     sortBy: name
     sortOrder: asc
-  markets:
-  - cfd
 - name: indices_major
   filter:
   - left: sector
@@ -64,8 +52,6 @@ presets:
   sort:
     sortBy: index_priority
     sortOrder: asc
-  markets:
-  - cfd
 - name: indices_currency
   filter:
   - left: sector
@@ -74,5 +60,3 @@ presets:
   sort:
     sortBy: index_priority
     sortOrder: asc
-  markets:
-  - cfd
