@@ -851,3 +851,91 @@ presets:
     sortOrder: desc
   options:
     active_symbols_only: true
+- name: futures_all
+  filter:
+  - left: typespecs
+    operation: has
+    right: continuous
+  sort:
+    sortBy: name
+    sortOrder: asc
+- name: futures_agricultural
+  filter:
+  - left: typespecs
+    operation: has
+    right: continuous
+  - left: sector
+    operation: equal
+    right: Agricultural
+  sort:
+    sortBy: name
+    sortOrder: asc
+- name: futures_energy
+  filter:
+  - left: typespecs
+    operation: has
+    right: continuous
+  - left: sector
+    operation: equal
+    right: Energy
+  sort:
+    sortBy: name
+    sortOrder: asc
+- name: futures_currencies
+  filter:
+  - left: typespecs
+    operation: has
+    right: continuous
+  - left: sector
+    operation: equal
+    right: Currencies
+  sort:
+    sortBy: name
+    sortOrder: asc
+- name: futures_metals
+  filter:
+  - left: typespecs
+    operation: has
+    right: continuous
+  - left: sector
+    operation: equal
+    right: Metals
+  sort:
+    sortBy: name
+    sortOrder: asc
+- name: futures_world_indices
+  filter:
+  - left: typespecs
+    operation: has
+    right: continuous
+  - left: sector
+    operation: equal
+    right: Indexes
+  sort:
+    sortBy: name
+    sortOrder: asc
+- name: futures_interest_rates
+  filter:
+  - left: typespecs
+    operation: has
+    right: continuous
+  - left: sector
+    operation: equal
+    right: Financials
+  sort:
+    sortBy: name
+    sortOrder: asc
+- name: indices_us
+  filter:
+  - left: sector
+    operation: empty
+  sort:
+    sortBy: index_priority
+    sortOrder: asc
+- name: indices_snp_sectors
+  filter:
+  - left: sector
+    operation: nempty
+  sort:
+    sortBy: index_priority
+    sortOrder: asc
