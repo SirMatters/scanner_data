@@ -1,6 +1,6 @@
 ---
 presets:
-- name: global_large_cap
+- name: worlds_largest_companies
   filter:
   - left: market_cap_basic
     operation: nempty
