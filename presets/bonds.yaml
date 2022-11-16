@@ -1,0 +1,94 @@
+---
+presets:
+- name: bonds_all
+  filter:
+  - left: description
+    operation: match
+    right: YIELD$
+- name: bonds_major
+  filter:
+  - left: description
+    operation: match
+    right: YIELD$
+  - left: name
+    operation: match
+    right: ".+10Y"
+  - left: country_code
+    operation: in_range
+    right:
+    - AR
+    - AU
+    - BR
+    - CA
+    - CN
+    - FR
+    - DE
+    - IN
+    - ID
+    - IT
+    - JP
+    - MX
+    - KR
+    - RU
+    - SA
+    - ZA
+    - TR
+    - UK
+    - US
+    - EU
+- name: bonds_all_10_year
+  filter:
+  - left: description
+    operation: match
+    right: YIELD$
+  - left: name
+    operation: match
+    right: ".+10Y"
+- name: bonds_americas
+  filter:
+  - left: description
+    operation: match
+    right: YIELD$
+  - left: country
+    operation: equal
+    right: Americas
+- name: bonds_europe
+  filter:
+  - left: description
+    operation: match
+    right: YIELD$
+  - left: country
+    operation: equal
+    right: Europe
+- name: bonds_asia
+  filter:
+  - left: description
+    operation: match
+    right: YIELD$
+  - left: country
+    operation: equal
+    right: Asia
+- name: bonds_pacific
+  filter:
+  - left: description
+    operation: match
+    right: YIELD$
+  - left: country
+    operation: equal
+    right: Pacific
+- name: bonds_middle_east
+  filter:
+  - left: description
+    operation: match
+    right: YIELD$
+  - left: country
+    operation: equal
+    right: Middle East
+- name: bonds_africa
+  filter:
+  - left: description
+    operation: match
+    right: YIELD$
+  - left: country
+    operation: equal
+    right: Africa
