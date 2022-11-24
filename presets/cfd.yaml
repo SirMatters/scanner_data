@@ -25,6 +25,10 @@ presets:
   - left: sector
     operation: equal
     right: Energy
+  symbols:
+    query:
+      types:
+        - cfd
   sort:
     sortBy: name
     sortOrder: asc
