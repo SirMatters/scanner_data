@@ -1,62 +1,75 @@
 ---
 presets:
 - name: cfd_all
+  symbols:
+    query:
+      types:
+        - cfd
   sort:
     sortBy: name
     sortOrder: asc
 - name: cfd_agricultural
+  symbols:
+    query:
+      types:
+        - cfd
   filter:
-  - left: sector
-    operation: equal
-    right: Agricultural
+    - left: sector
+      operation: equal
+      right: Agricultural
   sort:
     sortBy: name
     sortOrder: asc
 - name: cfd_energy
   filter:
-  - left: sector
-    operation: equal
-    right: Energy
+    - left: sector
+      operation: equal
+      right: Energy
+  symbols:
+    query:
+      types:
+        - cfd
   sort:
     sortBy: name
     sortOrder: asc
-- name: cfd_metals
+-
+  name: cfd_metals
   filter:
-  - left: sector
-    operation: equal
-    right: Metals
+    - left: sector
+      operation: equal
+      right: Metals
+  symbols:
+    query:
+      types:
+        - cfd
   sort:
     sortBy: name
     sortOrder: asc
 - name: cfd_world_indices
   filter:
-  - left: sector
-    operation: equal
-    right: index
-  sort:
-    sortBy: name
-    sortOrder: asc
-- name: cfd_interest_rates
-  filter:
-  - left: sector
-    operation: equal
-    right: bond
+    - left: sector
+      operation: equal
+      right: index
+  symbols:
+    query:
+      types:
+        - cfd
   sort:
     sortBy: name
     sortOrder: asc
 - name: indices_major
   filter:
-  - left: sector
-    operation: equal
-    right: index
+    - left: sector
+      operation: equal
+      right: index
   sort:
     sortBy: index_priority
     sortOrder: asc
 - name: indices_currency
   filter:
-  - left: sector
-    operation: equal
-    right: currency
+    - left: sector
+      operation: equal
+      right: currency
   sort:
     sortBy: index_priority
     sortOrder: asc
