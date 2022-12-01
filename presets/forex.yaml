@@ -1,10 +1,10 @@
 ---
 presets:
-- name: forex_all
+- name: forex_rates_all
   sort:
-      sortBy: name
-      sortOrder: asc
-- name: forex_major
+    sortBy: name
+    sortOrder: asc
+- name: forex_rates_major
   filter:
     - left: sector
       operation: equal
@@ -12,15 +12,15 @@ presets:
   sort:
     sortBy: forex_priority
     sortOrder: asc
-- name: forex_major
+- name: forex_rates_minor
   filter:
     - left: sector
       operation: equal
-      right: Major
+      right: Minor
   sort:
-    sortBy: forex_priority
+    sortBy: forex_minor_priority
     sortOrder: asc
-- name: forex_exotic
+- name: forex_rates_exotic
   filter:
     - left: sector
       operation: equal
@@ -28,7 +28,7 @@ presets:
   sort:
     sortBy: forex_exotic_priority
     sortOrder: asc
-- name: forex_americas
+- name: forex_rates_americas
   filter:
     - left: country,country2
       operation: equal
@@ -36,7 +36,7 @@ presets:
   sort:
     sortBy: forex_priority
     sortOrder: asc
-- name: forex_europe
+- name: forex_rates_europe
   filter:
     - left: country,country2
       operation: equal
@@ -44,7 +44,7 @@ presets:
   sort:
     sortBy: forex_priority
     sortOrder: asc
-- name: forex_asia
+- name: forex_rates_asia
   filter:
     - left: country,country2
       operation: equal
@@ -52,7 +52,7 @@ presets:
   sort:
     sortBy: forex_priority
     sortOrder: asc
-- name: forex_pacific
+- name: forex_rates_pacific
   filter:
     - left: country,country2
       operation: equal
@@ -60,7 +60,7 @@ presets:
   sort:
     sortBy: forex_priority
     sortOrder: asc
-- name: forex_middle_east
+- name: forex_rates_middle_east
   filter:
     - left: country,country2
       operation: equal
@@ -68,7 +68,7 @@ presets:
   sort:
     sortBy: forex_priority
     sortOrder: asc
-- name: forex_africa
+- name: forex_rates_africa
   filter:
     - left: country,country2
       operation: equal
