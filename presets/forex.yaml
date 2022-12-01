@@ -1,0 +1,78 @@
+---
+presets:
+- name: forex_all
+  sort:
+      sortBy: name
+      sortOrder: asc
+- name: forex_major
+  filter:
+    - left: sector
+      operation: equal
+      right: Major
+  sort:
+    sortBy: forex_priority
+    sortOrder: asc
+- name: forex_major
+  filter:
+    - left: sector
+      operation: equal
+      right: Major
+  sort:
+    sortBy: forex_priority
+    sortOrder: asc
+- name: forex_exotic
+  filter:
+    - left: sector
+      operation: equal
+      right: Exotic
+  sort:
+    sortBy: forex_exotic_priority
+    sortOrder: asc
+- name: forex_americas
+  filter:
+    - left: country,country2
+      operation: equal
+      right: Americas
+  sort:
+    sortBy: forex_priority
+    sortOrder: asc
+- name: forex_europe
+  filter:
+    - left: country,country2
+      operation: equal
+      right: Europe
+  sort:
+    sortBy: forex_priority
+    sortOrder: asc
+- name: forex_asia
+  filter:
+    - left: country,country2
+      operation: equal
+      right: Asia
+  sort:
+    sortBy: forex_priority
+    sortOrder: asc
+- name: forex_pacific
+  filter:
+    - left: country,country2
+      operation: equal
+      right: Pacific
+  sort:
+    sortBy: forex_priority
+    sortOrder: asc
+- name: forex_middle_east
+  filter:
+    - left: country,country2
+      operation: equal
+      right: Middle East
+  sort:
+    sortBy: forex_priority
+    sortOrder: asc
+- name: forex_africa
+  filter:
+    - left: country,country2
+      operation: equal
+      right: Africa
+  sort:
+    sortBy: forex_priority
+    sortOrder: asc
