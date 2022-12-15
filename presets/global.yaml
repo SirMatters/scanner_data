@@ -1,5 +1,6 @@
 presets:
-- filter:
+- name: worlds_largest_companies
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -22,6 +23,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  price_conversion:
+    to_currency: USD
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
   markets:
   - america
   - argentina
@@ -80,13 +86,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_companies
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_non_us_companies
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: country
@@ -112,6 +113,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -170,13 +176,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_non_us_companies
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_largest_employers
+  filter:
   - left: number_of_employees
     operation: nempty
   - left: type
@@ -199,6 +200,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: number_of_employees
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -257,13 +263,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_employers
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: number_of_employees
-    sortOrder: desc
-- filter:
+- name: worlds_highest_revenue
+  filter:
   - left: total_revenue
     operation: nempty
   - left: type
@@ -286,6 +287,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: total_revenue
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -344,13 +350,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_highest_revenue
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: total_revenue
-    sortOrder: desc
-- filter:
+- name: worlds_highest_earnings
+  filter:
   - left: gross_profit
     operation: nempty
   - left: type
@@ -373,6 +374,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: gross_profit
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -431,13 +437,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_highest_earnings
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: gross_profit
-    sortOrder: desc
-- filter:
+- name: worlds_highest_dividends
+  filter:
   - left: dividend_yield_recent
     operation: nempty
   - left: type
@@ -460,6 +461,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: dividend_yield_recent
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -518,13 +524,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_highest_dividends
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: dividend_yield_recent
-    sortOrder: desc
-- filter:
+- name: worlds_largest_oil_and_gas_companies
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -553,6 +554,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -611,13 +617,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_oil_and_gas_companies
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_largest_semiconductors_producers
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -641,6 +642,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -699,13 +705,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_semiconductors_producers
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_largest_telecommunication_companies
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -734,6 +735,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -792,13 +798,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_telecommunication_companies
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_largest_tech_companies
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -827,6 +828,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -885,13 +891,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_tech_companies
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_largest_biotech_companies
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -915,6 +916,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -973,13 +979,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_biotech_companies
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_largest_finance_companies
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -1004,6 +1005,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -1062,13 +1068,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_finance_companies
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_largest_banks
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -1095,6 +1096,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -1153,13 +1159,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_banks
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_largest_e_commerce_companies
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -1184,6 +1185,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -1242,13 +1248,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_e_commerce_companies
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_largest_software_companies
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -1273,6 +1274,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -1331,13 +1337,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_software_companies
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_largest_automakers
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -1361,6 +1362,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -1419,13 +1425,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_automakers
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_largest_hotels_and_resorts
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -1449,6 +1450,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -1507,13 +1513,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_hotels_and_resorts
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_largest_restaurant_chains
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -1537,6 +1538,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -1595,13 +1601,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_restaurant_chains
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_largest_stores
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -1628,6 +1629,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -1686,13 +1692,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_stores
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_largest_beverage_companies
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -1717,6 +1718,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -1775,13 +1781,8 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_beverage_companies
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc
-- filter:
+- name: worlds_largest_food_companies
+  filter:
   - left: market_cap_basic
     operation: nempty
   - left: type
@@ -1809,6 +1810,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
+  sort:
+    sortBy: market_cap_basic
+    sortOrder: desc
+  price_conversion:
+    to_currency: USD
   markets:
   - america
   - argentina
@@ -1867,9 +1873,3 @@ presets:
   - uk
   - venezuela
   - vietnam
-  name: worlds_largest_food_companies
-  price_conversion:
-    to_currency: USD
-  sort:
-    sortBy: market_cap_basic
-    sortOrder: desc

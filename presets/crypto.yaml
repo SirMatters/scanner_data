@@ -1,5 +1,6 @@
 presets:
-- filter:
+- name: market-cap-rank
+  filter:
   - left: name
     operation: match
     right: USD$
@@ -7,11 +8,11 @@ presets:
     operation: nempty
   - left: market_cap_calc
     operation: nempty
-  name: market-cap-rank
   sort:
     sortBy: market_cap_calc
     sortOrder: desc
-- filter:
+- name: top-defi
+  filter:
   - left: typespecs
     operation: has
     right: defi
@@ -22,7 +23,6 @@ presets:
     operation: nempty
   - left: market_cap_calc
     operation: nempty
-  name: top-defi
   sort:
     sortBy: market_cap_calc
     sortOrder: desc

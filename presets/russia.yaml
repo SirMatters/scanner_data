@@ -1,5 +1,6 @@
 presets:
-- filter:
+- name: all_stocks
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -12,11 +13,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: all_stocks
   sort:
     sortBy: name
     sortOrder: asc
-- filter:
+- name: large_cap
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -29,11 +30,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: large_cap
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
-- filter:
+- name: small_cap
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -46,11 +47,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: small_cap
   sort:
     sortBy: market_cap_basic
     sortOrder: asc
-- filter:
+- name: largest_employers
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -65,11 +66,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: largest_employers
   sort:
     sortBy: number_of_employees
     sortOrder: desc
-- filter:
+- name: high_dividend
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -85,11 +86,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: high_dividend
   sort:
     sortBy: dividend_yield_recent
     sortOrder: desc
-- filter:
+- name: highest_net_income
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -102,11 +103,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: highest_net_income
   sort:
     sortBy: net_income
     sortOrder: desc
-- filter:
+- name: gainers
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -122,11 +123,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: gainers
   sort:
     sortBy: change
     sortOrder: desc
-- filter:
+- name: losers
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -142,11 +143,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: losers
   sort:
     sortBy: change
     sortOrder: asc
-- filter:
+- name: volume_leaders
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -159,11 +160,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: volume_leaders
   sort:
     sortBy: volume
     sortOrder: desc
-- filter:
+- name: unusual_volume
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -176,11 +177,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: unusual_volume
   sort:
     sortBy: relative_volume_10d_calc
     sortOrder: desc
-- filter:
+- name: most_volatile
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -193,11 +194,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: most_volatile
   sort:
     sortBy: Volatility.D
     sortOrder: desc
-- filter:
+- name: high_beta
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -212,11 +213,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: high_beta
   sort:
     sortBy: beta_1_year
     sortOrder: desc
-- filter:
+- name: best_performing
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -231,11 +232,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: best_performing
   sort:
     sortBy: Perf.Y
     sortOrder: desc
-- filter:
+- name: highest_revenue
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -248,11 +249,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: highest_revenue
   sort:
     sortBy: total_revenue
     sortOrder: desc
-- filter:
+- name: most_expensive
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -267,11 +268,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: most_expensive
   sort:
     sortBy: close
     sortOrder: desc
-- filter:
+- name: penny_stocks
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -284,11 +285,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: penny_stocks
   sort:
     sortBy: close
     sortOrder: asc
-- filter:
+- name: overbought
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -304,11 +305,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: overbought
   sort:
     sortBy: RSI
     sortOrder: desc
-- filter:
+- name: oversold
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -324,11 +325,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: oversold
   sort:
     sortBy: RSI
     sortOrder: asc
-- filter:
+- name: all_time_high
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -344,11 +345,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: all_time_high
   sort:
     sortBy: name
     sortOrder: asc
-- filter:
+- name: all_time_low
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -364,11 +365,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: all_time_low
   sort:
     sortBy: name
     sortOrder: asc
-- filter:
+- name: above_52wk_high
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -384,11 +385,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: above_52wk_high
   sort:
     sortBy: name
     sortOrder: asc
-- filter:
+- name: below_52wk_low
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -404,11 +405,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: below_52wk_low
   sort:
     sortBy: name
     sortOrder: asc
-- filter:
+- name: highest_cash
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -421,11 +422,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: highest_cash
   sort:
     sortBy: cash_n_short_term_invest_fq
     sortOrder: desc
-- filter:
+- name: pre-market-gainers
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -443,11 +444,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: pre-market-gainers
   sort:
     sortBy: premarket_change
     sortOrder: desc
-- filter:
+- name: pre-market-losers
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -465,11 +466,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: pre-market-losers
   sort:
     sortBy: premarket_change
     sortOrder: asc
-- filter:
+- name: pre_market_most_active
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -484,11 +485,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: pre_market_most_active
   sort:
     sortBy: premarket_volume
     sortOrder: desc
-- filter:
+- name: pre_market_gappers
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -503,11 +504,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: pre_market_gappers
   sort:
     sortBy: premarket_gap
     sortOrder: desc
-- filter:
+- name: after_hours_gainers
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -525,11 +526,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: after_hours_gainers
   sort:
     sortBy: postmarket_change
     sortOrder: desc
-- filter:
+- name: after_hours_losers
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -547,11 +548,11 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: after_hours_losers
   sort:
     sortBy: postmarket_change
     sortOrder: asc
-- filter:
+- name: active_after_hours
+  filter:
   - left: typespecs
     operation: has
     right: common
@@ -566,29 +567,28 @@ presets:
   - left: active_symbol
     operation: equal
     right: 'true'
-  name: active_after_hours
   sort:
     sortBy: postmarket_volume
     sortOrder: desc
-- filter:
+- name: market_sectors
+  filter:
   - left: description
     operation: nempty
-  name: market_sectors
-  sort:
-    sortBy: description
-    sortOrder: asc
   symbols:
     query:
       types:
       - sector
-- filter:
-  - left: description
-    operation: nempty
-  name: market_industries
   sort:
     sortBy: description
     sortOrder: asc
+- name: market_industries
+  filter:
+  - left: description
+    operation: nempty
   symbols:
     query:
       types:
       - industry
+  sort:
+    sortBy: description
+    sortOrder: asc
