@@ -1,27 +1,26 @@
----
 presets:
 - name: forex_rates_all
   filter:
-    - left: name
-      operation: nempty
+  - left: name
+    operation: nempty
   symbols:
     query:
       types:
-        - forex
+      - forex
   sort:
     sortBy: name
     sortOrder: asc
 - name: forex_rates_major
   filter:
-    - left: forex_priority
-      operation: nempty
-    - left: sector
-      operation: equal
-      right: Major
+  - left: forex_priority
+    operation: nempty
+  - left: sector
+    operation: equal
+    right: Major
   symbols:
     query:
       types:
-        - forex
+      - forex
   sort:
     sortBy: forex_priority
     sortOrder: asc
@@ -49,91 +48,91 @@ presets:
   symbols:
     query:
       types:
-        - forex
+      - forex
   sort:
     sortBy: forex_exotic_priority
     sortOrder: asc
 - name: forex_rates_americas
   filter:
-    - left: forex_priority
-      operation: nempty
-    - left: country,country2
-      operation: equal
-      right: Americas
+  - left: forex_priority
+    operation: nempty
+  - left: country,country2
+    operation: equal
+    right: Americas
   symbols:
     query:
       types:
-        - forex
+      - forex
   sort:
     sortBy: forex_priority
     sortOrder: asc
 - name: forex_rates_europe
   filter:
-    - left: forex_priority
-      operation: nempty
-    - left: country,country2
-      operation: equal
-      right: Europe
+  - left: forex_priority
+    operation: nempty
+  - left: country,country2
+    operation: equal
+    right: Europe
   symbols:
     query:
       types:
-        - forex
+      - forex
   sort:
     sortBy: forex_priority
     sortOrder: asc
 - name: forex_rates_asia
   filter:
-    - left: forex_priority
-      operation: nempty
-    - left: country,country2
-      operation: equal
-      right: Asia
+  - left: forex_priority
+    operation: nempty
+  - left: country,country2
+    operation: equal
+    right: Asia
   symbols:
     query:
       types:
-        - forex
+      - forex
   sort:
     sortBy: forex_priority
     sortOrder: asc
 - name: forex_rates_pacific
   filter:
-    - left: forex_priority
-      operation: nempty
-    - left: country,country2
-      operation: equal
-      right: Pacific
+  - left: forex_priority
+    operation: nempty
+  - left: country,country2
+    operation: equal
+    right: Pacific
   symbols:
     query:
       types:
-        - forex
+      - forex
   sort:
     sortBy: forex_priority
     sortOrder: asc
 - name: forex_rates_middle_east
   filter:
-    - left: forex_priority
-      operation: nempty
-    - left: country,country2
-      operation: equal
-      right: Middle East
+  - left: forex_priority
+    operation: nempty
+  - left: country,country2
+    operation: equal
+    right: Middle East
   symbols:
     query:
       types:
-        - forex
+      - forex
   sort:
     sortBy: forex_priority
     sortOrder: asc
 - name: forex_rates_africa
   filter:
-    - left: forex_priority
-      operation: nempty
-    - left: country,country2
-      operation: equal
-      right: Africa
+  - left: forex_priority
+    operation: nempty
+  - left: country,country2
+    operation: equal
+    right: Africa
   symbols:
     query:
       types:
-        - forex
+      - forex
   sort:
     sortBy: forex_priority
     sortOrder: asc

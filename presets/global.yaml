@@ -1,4 +1,3 @@
----
 presets:
 - name: worlds_largest_companies
   filter:
@@ -21,8 +20,9 @@ presets:
   - left: is_primary
     operation: equal
     right: true
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   price_conversion:
     to_currency: USD
   sort:
@@ -110,8 +110,9 @@ presets:
   - left: is_primary
     operation: equal
     right: true
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -196,8 +197,9 @@ presets:
   - left: is_primary
     operation: equal
     right: true
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: number_of_employees
     sortOrder: desc
@@ -282,8 +284,9 @@ presets:
   - left: is_primary
     operation: equal
     right: true
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: total_revenue
     sortOrder: desc
@@ -368,8 +371,9 @@ presets:
   - left: is_primary
     operation: equal
     right: true
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: gross_profit
     sortOrder: desc
@@ -454,8 +458,9 @@ presets:
   - left: is_primary
     operation: equal
     right: true
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: dividend_yield_recent
     sortOrder: desc
@@ -546,8 +551,9 @@ presets:
     - Oilfield Services/Equipment
     - Gas Distributors
     - Integrated Oil
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -633,8 +639,9 @@ presets:
     operation: in_range
     right:
     - Semiconductors
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -725,8 +732,9 @@ presets:
     - Wireless Telecommunications
     - Cable/Satellite TV
     - Broadcasting
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -817,8 +825,9 @@ presets:
     - Computer Processing Hardware
     - Internet Software/Services
     - Data Processing Services
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -904,8 +913,9 @@ presets:
     operation: in_range
     right:
     - Biotechnology
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -992,8 +1002,9 @@ presets:
     right:
     - Finance/Rental/Leasing
     - Financial Conglomerates
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1082,8 +1093,9 @@ presets:
     - Major Banks
     - Regional Banks
     - Savings Banks
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1170,8 +1182,9 @@ presets:
     right:
     - Internet Retail
     - Electronics/Appliance Stores
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1258,8 +1271,9 @@ presets:
     right:
     - Internet Software/Services
     - Packaged Software
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1345,8 +1359,9 @@ presets:
     operation: in_range
     right:
     - Motor Vehicles
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1432,8 +1447,9 @@ presets:
     operation: in_range
     right:
     - Hotels/Resorts/Cruise lines
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1519,8 +1535,9 @@ presets:
     operation: in_range
     right:
     - Restaurants
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1609,8 +1626,9 @@ presets:
     - Discount Stores
     - Electronics/Appliance Stores
     - Specialty Stores
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1697,8 +1715,9 @@ presets:
     right:
     - 'Beverages: Alcoholic'
     - 'Beverages: Non-Alcoholic'
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1788,8 +1807,9 @@ presets:
     - 'Food: Major Diversified'
     - 'Food: Meat/Fish/Dairy'
     - 'Food: Specialty/Candy'
-  options:
-    active_symbols_only: true
+  - left: active_symbol
+    operation: equal
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
