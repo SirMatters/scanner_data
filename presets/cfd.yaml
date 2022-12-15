@@ -1,14 +1,21 @@
----
 presets:
 - name: cfd_all
   sort:
     sortBy: name
     sortOrder: asc
+  symbols:
+    query:
+      types:
+      - cfd
 - name: cfd_agricultural
   filter:
   - left: sector
     operation: equal
     right: Agricultural
+  symbols:
+    query:
+      types:
+      - cfd
   sort:
     sortBy: name
     sortOrder: asc
@@ -17,6 +24,10 @@ presets:
   - left: sector
     operation: equal
     right: Energy
+  symbols:
+    query:
+      types:
+      - cfd
   sort:
     sortBy: name
     sortOrder: asc
@@ -25,6 +36,10 @@ presets:
   - left: sector
     operation: equal
     right: Metals
+  symbols:
+    query:
+      types:
+      - cfd
   sort:
     sortBy: name
     sortOrder: asc
@@ -33,14 +48,10 @@ presets:
   - left: sector
     operation: equal
     right: index
-  sort:
-    sortBy: name
-    sortOrder: asc
-- name: cfd_interest_rates
-  filter:
-  - left: sector
-    operation: equal
-    right: bond
+  symbols:
+    query:
+      types:
+      - cfd
   sort:
     sortBy: name
     sortOrder: asc
