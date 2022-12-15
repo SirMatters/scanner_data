@@ -21,7 +21,7 @@ presets:
     right: stock
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: name
     sortOrder: asc
@@ -47,7 +47,7 @@ presets:
     right: stock
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -73,7 +73,7 @@ presets:
     right: stock
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: asc
@@ -101,7 +101,7 @@ presets:
     operation: nempty
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: number_of_employees
     sortOrder: desc
@@ -130,7 +130,7 @@ presets:
     right: 0
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: dividend_yield_recent
     sortOrder: desc
@@ -156,7 +156,7 @@ presets:
     right: stock
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: net_income
     sortOrder: desc
@@ -190,7 +190,7 @@ presets:
     right: 0
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: change
     sortOrder: desc
@@ -224,7 +224,7 @@ presets:
     right: 0
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: change
     sortOrder: asc
@@ -255,7 +255,7 @@ presets:
     - 10000
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: volume
     sortOrder: desc
@@ -281,7 +281,7 @@ presets:
     right: stock
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: relative_volume_10d_calc
     sortOrder: desc
@@ -307,7 +307,7 @@ presets:
     right: stock
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: Volatility.D
     sortOrder: desc
@@ -335,7 +335,7 @@ presets:
     operation: nempty
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: beta_1_year
     sortOrder: desc
@@ -363,7 +363,7 @@ presets:
     operation: nempty
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: Perf.Y
     sortOrder: desc
@@ -389,7 +389,7 @@ presets:
     right: stock
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: total_revenue
     sortOrder: desc
@@ -417,7 +417,7 @@ presets:
     operation: nempty
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: close
     sortOrder: desc
@@ -443,7 +443,7 @@ presets:
     right: stock
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: close
     sortOrder: asc
@@ -472,7 +472,7 @@ presets:
     right: 70
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: RSI
     sortOrder: desc
@@ -501,7 +501,7 @@ presets:
     right: 30
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: RSI
     sortOrder: asc
@@ -530,7 +530,7 @@ presets:
     right: high
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: name
     sortOrder: asc
@@ -559,7 +559,7 @@ presets:
     right: low
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: name
     sortOrder: asc
@@ -588,7 +588,7 @@ presets:
     right: high
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: name
     sortOrder: asc
@@ -617,7 +617,7 @@ presets:
     right: low
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: name
     sortOrder: asc
@@ -643,7 +643,7 @@ presets:
     right: stock
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: cash_n_short_term_invest_fq
     sortOrder: desc
@@ -674,7 +674,7 @@ presets:
     operation: nempty
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: premarket_change
     sortOrder: desc
@@ -705,7 +705,7 @@ presets:
     operation: nempty
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: premarket_change
     sortOrder: asc
@@ -733,7 +733,7 @@ presets:
     operation: nempty
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: premarket_volume
     sortOrder: desc
@@ -761,7 +761,7 @@ presets:
     operation: nempty
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: premarket_gap
     sortOrder: desc
@@ -792,7 +792,7 @@ presets:
     operation: nempty
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: postmarket_change
     sortOrder: desc
@@ -823,7 +823,7 @@ presets:
     operation: nempty
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: postmarket_change
     sortOrder: asc
@@ -851,7 +851,7 @@ presets:
     operation: nempty
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: postmarket_volume
     sortOrder: desc
@@ -877,7 +877,7 @@ presets:
     right: PINK
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc

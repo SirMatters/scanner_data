@@ -22,7 +22,7 @@ presets:
     right: true
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   price_conversion:
     to_currency: USD
   sort:
@@ -112,7 +112,7 @@ presets:
     right: true
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -199,7 +199,7 @@ presets:
     right: true
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: number_of_employees
     sortOrder: desc
@@ -286,7 +286,7 @@ presets:
     right: true
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: total_revenue
     sortOrder: desc
@@ -373,7 +373,7 @@ presets:
     right: true
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: gross_profit
     sortOrder: desc
@@ -460,7 +460,7 @@ presets:
     right: true
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: dividend_yield_recent
     sortOrder: desc
@@ -553,7 +553,7 @@ presets:
     - Integrated Oil
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -641,7 +641,7 @@ presets:
     - Semiconductors
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -734,7 +734,7 @@ presets:
     - Broadcasting
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -827,7 +827,7 @@ presets:
     - Data Processing Services
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -915,7 +915,7 @@ presets:
     - Biotechnology
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1004,7 +1004,7 @@ presets:
     - Financial Conglomerates
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1095,7 +1095,7 @@ presets:
     - Savings Banks
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1184,7 +1184,7 @@ presets:
     - Electronics/Appliance Stores
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1273,7 +1273,7 @@ presets:
     - Packaged Software
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1361,7 +1361,7 @@ presets:
     - Motor Vehicles
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1449,7 +1449,7 @@ presets:
     - Hotels/Resorts/Cruise lines
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1537,7 +1537,7 @@ presets:
     - Restaurants
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1628,7 +1628,7 @@ presets:
     - Specialty Stores
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1717,7 +1717,7 @@ presets:
     - 'Beverages: Non-Alcoholic'
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
@@ -1809,7 +1809,7 @@ presets:
     - 'Food: Specialty/Candy'
   - left: active_symbol
     operation: equal
-    right: 'true'
+    right: true
   sort:
     sortBy: market_cap_basic
     sortOrder: desc
