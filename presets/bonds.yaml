@@ -9,7 +9,7 @@ presets:
   - left: description
     operation: match
     right: YIELD$
-- name: bonds_major_yield
+- name: bonds_major_10y_yield
   filter:
   - left: description
     operation: match
