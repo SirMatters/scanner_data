@@ -38,7 +38,7 @@ presets:
     - ZA
     - KR
     - TR
-    - UK
+    - GB
     - US
 - name: bonds_americas_yield
   filter:
