@@ -9,6 +9,14 @@ presets:
   - left: description
     operation: match
     right: YIELD$
+- name: bonds_all_10y_yield
+  filter:
+  - left: description
+    operation: match
+    right: YIELD$
+  - left: name
+    operation: match
+    right: ".+10Y"
 - name: bonds_major_10y_yield
   filter:
   - left: description
