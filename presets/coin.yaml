@@ -17,7 +17,7 @@ presets:
     sortOrder: desc
 - name: coin_gainers
   filter:
-  - left: 24h_close_change|5в
+  - left: 24h_close_change|5
     operation: greater
     right: 0
   sort:
